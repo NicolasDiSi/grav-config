@@ -1,0 +1,32 @@
+2026/01/14 16:18:57 [error] 287#287: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught BadMethodCallException: Failed to open dir: plugins:// does not exist. in /app/www/public/vendor/rockettheme/toolbox/ResourceLocator/src/UniformResourceIterator.php:109
+Stack trace:
+#0 /app/www/public/vendor/rockettheme/toolbox/ResourceLocator/src/UniformResourceIterator.php(49): RocketTheme\Toolbox\ResourceLocator\UniformResourceIterator->rewind()
+#1 /app/www/public/vendor/rockettheme/toolbox/ResourceLocator/src/UniformResourceLocator.php(54): RocketTheme\Toolbox\ResourceLocator\UniformResourceIterator->__construct()
+#2 /app/www/public/system/src/Grav/Common/Plugins.php(47): RocketTheme\Toolbox\ResourceLocator\UniformResourceLocator->getIterator()
+#3 /app/www/public/system/src/Grav/Common/Grav.php(738): Grav\Common\Plugins->__construct()
+#4 /app/www/public/vendor/pimple/pimple/src/Pimple/Container.php(122): Grav\Common\Grav->Grav\Common\{closure}()
+#5 /app/www/public/system/src/Grav/Common/Processors/InitializeProcessor.php(178): Pimple\Container->offsetGet" while reading response header from upstream, client: 172.21.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8080", referrer: "http://localhost:8080/blog"
+2026/01/14 16:18:58 [error] 287#287: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught BadMethodCallException: Failed to open dir: plugins:// does not exist. in /app/www/public/vendor/rockettheme/toolbox/ResourceLocator/src/UniformResourceIterator.php:109
+Stack trace:
+#0 /app/www/public/vendor/rockettheme/toolbox/ResourceLocator/src/UniformResourceIterator.php(49): RocketTheme\Toolbox\ResourceLocator\UniformResourceIterator->rewind()
+#1 /app/www/public/vendor/rockettheme/toolbox/ResourceLocator/src/UniformResourceLocator.php(54): RocketTheme\Toolbox\ResourceLocator\UniformResourceIterator->__construct()
+#2 /app/www/public/system/src/Grav/Common/Plugins.php(47): RocketTheme\Toolbox\ResourceLocator\UniformResourceLocator->getIterator()
+#3 /app/www/public/system/src/Grav/Common/Grav.php(738): Grav\Common\Plugins->__construct()
+#4 /app/www/public/vendor/pimple/pimple/src/Pimple/Container.php(122): Grav\Common\Grav->Grav\Common\{closure}()
+#5 /app/www/public/system/src/Grav/Common/Processors/InitializeProcessor.php(178): Pimple\Container->offsetGet" while reading response header from upstream, client: 172.21.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8080", referrer: "http://localhost:8080/blog"
+2026/01/14 16:19:00 [error] 287#287: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught BadMethodCallException: Failed to open dir: plugins:// does not exist. in /app/www/public/vendor/rockettheme/toolbox/ResourceLocator/src/UniformResourceIterator.php:109
+Stack trace:
+#0 /app/www/public/vendor/rockettheme/toolbox/ResourceLocator/src/UniformResourceIterator.php(49): RocketTheme\Toolbox\ResourceLocator\UniformResourceIterator->rewind()
+#1 /app/www/public/vendor/rockettheme/toolbox/ResourceLocator/src/UniformResourceLocator.php(54): RocketTheme\Toolbox\ResourceLocator\UniformResourceIterator->__construct()
+#2 /app/www/public/system/src/Grav/Common/Plugins.php(47): RocketTheme\Toolbox\ResourceLocator\UniformResourceLocator->getIterator()
+#3 /app/www/public/system/src/Grav/Common/Grav.php(738): Grav\Common\Plugins->__construct()
+#4 /app/www/public/vendor/pimple/pimple/src/Pimple/Container.php(122): Grav\Common\Grav->Grav\Common\{closure}()
+#5 /app/www/public/system/src/Grav/Common/Processors/InitializeProcessor.php(178): Pimple\Container->offsetGet" while reading response header from upstream, client: 172.21.0.1, server: _, request: "GET /admin/pages/blog/taxonomy HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8080", referrer: "http://localhost:8080/admin/pages"
+2026/01/14 16:19:23 [error] 287#287: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught BadMethodCallException: Failed to open dir: plugins:// does not exist. in /app/www/public/vendor/rockettheme/toolbox/ResourceLocator/src/UniformResourceIterator.php:109
+Stack trace:
+#0 /app/www/public/vendor/rockettheme/toolbox/ResourceLocator/src/UniformResourceIterator.php(49): RocketTheme\Toolbox\ResourceLocator\UniformResourceIterator->rewind()
+#1 /app/www/public/vendor/rockettheme/toolbox/ResourceLocator/src/UniformResourceLocator.php(54): RocketTheme\Toolbox\ResourceLocator\UniformResourceIterator->__construct()
+#2 /app/www/public/system/src/Grav/Common/Plugins.php(47): RocketTheme\Toolbox\ResourceLocator\UniformResourceLocator->getIterator()
+#3 /app/www/public/system/src/Grav/Common/Grav.php(738): Grav\Common\Plugins->__construct()
+#4 /app/www/public/vendor/pimple/pimple/src/Pimple/Container.php(122): Grav\Common\Grav->Grav\Common\{closure}()
+#5 /app/www/public/system/src/Grav/Common/Processors/InitializeProcessor.php(178): Pimple\Container->offsetGet" while reading response header from upstream, client: 172.21.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8080", referrer: "http://localhost:8080/blog"

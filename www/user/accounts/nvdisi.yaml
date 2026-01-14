@@ -1,0 +1,12 @@
+state: enabled
+email: nicolasdisicisco@gmail.com
+fullname: 'Nicolas Di Si'
+title: Administrator
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+hashed_password: $2y$10$BGqA0tKsPMKolB9WbBXhYO29tpkK7khgjWQN27RJOm4SPUH8dHbTq
+reset: 'a3f901e2c328312c79963fad32ed0dfa::1768355234'
