@@ -61,18 +61,55 @@ form:
                       options:
                         1: PLUGIN_ADMIN.YES
                         0: PLUGIN_ADMIN.NO
-                
-            _Content_Section:
-              type: section
-              underline: true
-              title: MUNDANA.ADMIN.DEFAULT.CONTENT
-            _ContentOptions:
-              type: column
+            _publishing_grid:
+              type: columns
+              classes: custom-grid
               fields:
-                 content:
-                  type: markdown
-                  validate:
-                    type: textarea
+                # Agrupamos el editor en la columna izquierda
+                editor_column:
+                  type: column
+                  classes: editor-col
+                  fields:
+                    _Content_Section:
+                      type: section
+                      underline: true
+                      title: MUNDANA.ADMIN.DEFAULT.CONTENT
+                    _ContentOptions:
+                      type: column
+                      fields:
+                        content:
+                          type: markdown
+                          validate:
+                            type: textarea
+
+                # Agrupamos el preview en la columna derecha
+                preview_column:
+                  type: column
+                  classes: preview-col
+                  fields:
+                    _draft_preview_box:
+                      type: display
+                      style: vertical
+                      title: Preview
+                      markdown: false
+                      evaluate: true
+                      content: |
+                        {% set preview_url = base_url_relative_all ~ '/preview?slug=' ~ context.route %}
+                        <div style="margin-bottom: 20px; border: 2px solid #2dce89; border-radius: 4px; overflow: hidden; background: #eee;">
+                          <iframe id="live-preview" 
+                                  src="{{ preview_url }}" 
+                                  style="width: 100%; min-height: 550px; border: none; background: #fff;">
+                          </iframe>
+                          <div style="padding: 8px; background: #2dce89; color: white; display: flex; justify-content: space-between; align-items: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+                            <span style="font-size: 0.85rem;">
+                              <strong>Draft Mode:</strong> Previewing <code style="background: rgba(0,0,0,0.1); padding: 2px 4px;">{{ context.route }}</code>
+                            </span>
+                            <button type="button" onclick="document.getElementById('live-preview').src = '{{ preview_url }}' + '&t=' + new Date().getTime()" 
+                                    style="background: rgba(255,255,255,0.2); border: 1px solid #fff; color: #fff; padding: 4px 12px; border-radius: 3px; cursor: pointer; font-size: 0.75rem; font-weight: bold;">
+                              Save Changes to Refresh the page!
+                            </button>
+                          </div>
+                        </div>
             _Media_Section:
               type: section
               underline: true
