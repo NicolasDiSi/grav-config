@@ -97,7 +97,7 @@ form:
                       content: |
                         {# Condicional simple basado en el estado de publicación #}
                         {% if context.published %}
-                            {% set preview_url = base_url_relative_all ~ context.parent.route ~ '/:preview' %}
+                            {% set preview_url = base_url_relative_all ~ (context.route ? context.route : context.parent.route)  ~ '/:preview' %}
                         {% else %}
                             {% set preview_url = base_url_relative_all ~ '/preview?slug=' ~ context.route %}
                         {% endif %}
@@ -115,6 +115,7 @@ form:
                               Save Changes to Refresh the page!
                             </button>
                           </div>
+                          <script>console.log({{ context| json_encode | raw }});</script>
                         </div>
             _Media_Section:
               type: section
